@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.sandagerdi</groupId>
+  <artifactId>FacebookChatBot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>FacebookChatBot</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+	<repositories>
+    	<!-- In Project repository -->
+<repository>
+	<id>in-project</id>
+	<name>In Project Repo</name>
+	<url>file://${project.basedir}/libs</url>
+</repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-lang3</artifactId>
+    	<version>3.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>commons-codec</groupId>
+    	<artifactId>commons-codec</artifactId>
+    	<version>1.8</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.apis</groupId>
+    	<artifactId>google-api-services-translate</artifactId>
+    	<version>v2-rev20-1.17.0-rc</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.googlecode</groupId>
+    	<artifactId>google-api-translate-java</artifactId>
+    	<version>0.92</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.igniterealtime.smack</groupId>
+    	<artifactId>smackx</artifactId>
+    	<version>3.2.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.igniterealtime.smack</groupId>
+    	<artifactId>smack</artifactId>
+    	<version>3.2.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.api-client</groupId>
+    	<artifactId>google-api-client</artifactId>
+    	<version>1.17.0-rc</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.api-client</groupId>
+    	<artifactId>google-api-client-appengine</artifactId>
+    	<version>1.17.0-rc</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.api-client</groupId>
+    	<artifactId>google-api-client-jackson2</artifactId>
+    	<version>1.17.0-rc</version>
+    </dependency>
+  		<dependency>
+  			<groupId>org.google.translate</groupId>
+  			<artifactId>google-translate-api-v2-java-core</artifactId>
+  			<version>0.52</version>
+  		</dependency>
+  	</dependencies>
+</project>
