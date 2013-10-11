@@ -67,26 +67,15 @@ public class FBChat {
                         }
                         if (message.getBody().startsWith("Calc:")) {
                             String msg = message.getBody();
-                            BotFunctions b = new BotFunctions();
-                            String res = b.calculate(msg);
-                            messageUser(message.getFrom(),res, connection);
+                            Calculator c = new Calculator();
+
+                            messageUser(message.getFrom(), c.calculate(msg), connection);
                         }
 
                     }
                 });
             }
         });
-        GoogleTranslator g = new GoogleTranslator();
-        String translatedMessage = "";
-        try {
-            translatedMessage = g.translate("Tran: I like your face.");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        //String bjartur = getUserName("Bjartur");
-        //System.out.println("Username: " + bjartur);
-
-        messageUser("-695538983@chat.facebook.com", translatedMessage, connection);
 
         // idle for 20 seconds
         final long start = System.nanoTime();
@@ -105,9 +94,7 @@ public class FBChat {
 
             if (StringUtils.startsWithIgnoreCase(entry.getName(), input)) {
                 foundUser = entry.getUser();
-                // System.out.println("HELLO");
             }
-            // System.out.println(entry.getName() + ", " + entry.getUser());
         }
         return foundUser;
     }
