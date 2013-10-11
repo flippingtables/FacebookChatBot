@@ -15,11 +15,11 @@ class Operation {
     }
 
     public static String substraction(double num1, double num2) {
-        return new DecimalFormat("##.##").format(num2 - num2);
+        return new DecimalFormat("##.##").format(num1 - num2);
     }
 
     public static String multiplication(double num1, double num2) {
-        return new DecimalFormat("##.##").format(num2 * num2);
+        return new DecimalFormat("##.##").format(num1 * num2);
     }
 
     public static String division(double num1, double num2) {

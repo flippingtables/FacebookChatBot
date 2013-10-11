@@ -38,12 +38,7 @@ public class Calculator {
 
         char format = new DecimalFormatSymbols(Locale.getDefault(Locale.Category.FORMAT)).getDecimalSeparator();
         System.out.println(format);
-        if (format == '.') {
-            num1Str = num1Str.replace(',', '.');
-            num2Str = num2Str.replace(',', '.');
-            num1 = Double.parseDouble(num1Str);
-            num2 = Double.parseDouble(num2Str);
-        } else if (format == ',') {
+        if ((format == '.') || (format == ',')) {
             num1Str = num1Str.replace(',', '.');
             num2Str = num2Str.replace(',', '.');
             num1 = Double.parseDouble(num1Str);
