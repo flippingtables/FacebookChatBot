@@ -1,0 +1,6 @@
+/target
+.settings/
+.idea
+.project
+FacebookChatBot.iml
+.classpath
