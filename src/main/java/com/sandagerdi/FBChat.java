@@ -15,6 +15,17 @@ public class FBChat {
     static Connection connection;
 
     public static void main(String args[]) throws InterruptedException {
+        BotFunctions b = new BotFunctions();
+        String result = "";
+        try {
+            for (int i =0;i<20;i++){
+                result =b.readLargerTextFile("begin.txt");
+                System.out.println(result);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         Properties prop = new Properties();
         try {
             //load a properties file
@@ -68,8 +79,20 @@ public class FBChat {
                         if (message.getBody().startsWith("Calc:")) {
                             String msg = message.getBody();
                             Calculator c = new Calculator();
+                            String answer = c.calc1(msg).toString();
+                            messageUser(message.getFrom(), answer, connection);
+                        }
 
-                            messageUser(message.getFrom(), c.calculate(msg), connection);
+                        if (message.getBody().startsWith("RandomQuote")) {
+                            BotFunctions b = new BotFunctions();
+                            String answer = null;
+                            try {
+                                answer = b.readLargerTextFile("begin.txt");
+                            } catch (IOException e) {
+                                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                            }
+                            //String output = answer.substring(0, 1).toUpperCase() + answer.substring(1);
+                            messageUser(message.getFrom(), answer, connection);
                         }
 
                     }
